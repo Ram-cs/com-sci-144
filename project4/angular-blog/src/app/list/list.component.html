@@ -1,0 +1,11 @@
+<h3> {{userName}} 's Blog</h3>
+<button type="button" (click)="clicked()"> New post</button>
+
+<ul class="posts">
+  <li *ngFor="let post of posts">
+      <a routerLink="/edit/{{post.postid}}" class="routerLink">
+        <span class="badge">{{post.created | date: 'medium'}}</span> {{post.title}}
+    </a>
+  </li>
+</ul>
+

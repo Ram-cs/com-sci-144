@@ -1,0 +1,13 @@
+/*reference: https://angular.io/tutorial/toh-pt0 */
+
+button {
+     margin-right: 5px; 
+     height: 30px;
+     border-radius: 5px;
+ }
+ 
+ button:hover {
+     background-color: black;
+     color: white;
+ }
+ 

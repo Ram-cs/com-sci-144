@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head><title>List Post</title>
+<style>
+/*a:hover {
+    background-color: green;
+    color: white;
+}*/
+
+a {
+    color: white;
+    font-size: 15px;
+}
+
+#new-post-button:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+#open:hover {
+    background-color: green;
+    color: white;
+}
+
+#delete, #open{
+    width: 100px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 6px 4px;
+}
+
+#open {
+    color: green;
+    border-color: green;
+}
+
+
+#new-post-button {
+    float: left;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: black;
+    margin:5px;
+    border-radius: 5px;
+    background-color: seagreen;
+    font-size: 12px;
+    padding: 14px 45px;
+    overflow: visible;
+    margin-top: 15px;
+}
+
+#new-post-button:focus {
+    outline: none;
+}
+
+#open:focus {
+    outline: none;
+}
+
+#delete:focus {
+    outline: none;
+}
+
+#next {
+    text-decoration: none;
+}
+
+
+/*https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro*/
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 6px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+</style>
+</head>
+<body style="background-color: snow">
+
+<h2> Current User <span style='color: #FF0000;'><%=username%></span></h2>
+<table>
+    <tr>
+        <th>PostID</th>
+        <th>Title</th>
+        <th>Created</th>
+        <th>Modified</th>
+        <th>Body</th> 
+    </tr>
+    <% for (let post of posts) { %>
+        <tr>
+            <td> <%= post.postid %> </td>
+            <td> <%= post.title %> </td>
+            <td> <%= new Date(post.created) %> </td>
+            <td> <%= new Date(post.modified) %> </td>
+            <td> <%= post.body %> </td>
+        </tr>
+    <% } %>
+</table>
+
+
+<% if( next != null) { %>
+<div id="new-post-button">
+    <% let get_username = posts[0].username%>
+    <a href="/blog/<%= get_username%>?start=<%= next %>" id = "next"> Next </a>
+</div>
+<% } %>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+

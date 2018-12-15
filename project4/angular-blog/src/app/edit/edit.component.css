@@ -1,0 +1,54 @@
+
+#editBox {
+     display: block;
+     padding: 1em;
+    
+ }
+ 
+ #button {
+   padding: 10px;
+ }
+ 
+ button {
+     margin-right: 5px; 
+     height: 30px;
+     border-radius: 5px;
+ }
+ 
+
+ button[type=text]:disabled {
+    background: red;
+}
+ button:hover {
+     background-color: black;
+     color: white;
+ }
+ 
+ input {
+     display: block;
+     width: 250px;
+     font-size: 1em;
+     padding: 8px;
+     margin-top: 5px;
+ }
+   
+ textarea {
+     display: block;
+     width: 400px;
+     height: 200px;
+     margin-top: 5px;
+ }
+ 
+ #form {
+     background-color: cadetblue;
+     position: fixed;
+     display: block;
+     top: 10%;
+     left: 450px;
+ }
+
+ #modifiedDate {
+     color: antiquewhite;
+     padding: 10px;
+     font-size: 14px;
+ }

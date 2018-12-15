@@ -1,0 +1,7 @@
+
+<!-- <h1> preview works</h1> -->
+<div *ngIf="post" class="preview">
+    <button type="submit" (click)="editPage()" id="editPage"> Edit Page </button>
+    <h5><div [innerHTML]="previewTitle" class="text"></div></h5>
+    <div [innerHTML]="previewBody" class="text"> </div>
+</div>

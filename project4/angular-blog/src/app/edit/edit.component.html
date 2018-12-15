@@ -1,0 +1,36 @@
+<!-- <h2>Edit works </h2>
+{{postID}}
+{{post}} -->
+<div *ngIf="post">
+    <form id="form" [formGroup]="inputForm">
+      <div id="editBox">
+        <label>
+          <span style="color: white;">Title:</span>
+          <input name="title" formControlName="title" placeholder="title" [(ngModel)]="post.title">
+        </label>
+        <div style="margin-top: 10px;">
+        <label>
+          <span style="color: white;">Body:</span>
+          <textarea type="text" formControlName="body" name ="body" [(ngModel)]="post.body"></textarea>
+        </label>
+      </div>
+    </div>
+
+    <span id="modifiedDate">Last Modified: {{post.modified | date: 'medium'}}</span>
+
+    <div id="button">
+      <label>
+        <button type="button" (click)="delete()">delete</button>
+      </label>
+      <label *ngIf="inputForm.pristine">
+        <button style="color:red" type="button" disabled (click)="save()">save</button>
+      </label>
+      <label *ngIf="inputForm.pristine == false">
+        <button type="button" (click)="save()">save</button>
+      </label>
+      <label>
+        <button type="button" (click)="preview()">preview</button>
+      </label>
+    </div>
+    </form>
+  </div>

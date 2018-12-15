@@ -1,0 +1,32 @@
+button {
+     margin-right: 5px; 
+     height: 30px;
+     border-radius: 5px;
+
+ }
+ 
+ button:hover {
+     background-color: black;
+     color: white;
+ }
+
+ .preview {
+     position: fixed;
+     background-color: orange;
+     top: 10%;
+     left: 450px;
+     height: 30%;
+     width: 50%;
+     color: blue;
+     border-radius: 8px;
+ }
+
+ #editPage {
+      position: fixed;
+      top: 5%;
+ }
+
+ .text {
+      margin: 10px;
+      font-size: 14px;
+ }

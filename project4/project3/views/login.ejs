@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit Post</title>
+<style>
+
+.mybutton {
+    list-style-type: none;
+    margin-left: 350px;
+    padding: 30px;
+    padding-left: 60px;
+    overflow: hidden;
+    background-color: orange;
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #555;
+    color: white;
+}
+
+button {
+    text-decoration: none;
+    display: block;
+    padding: 13px;
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    margin-left: 100px;
+    font-size: 12px;
+
+}
+
+#title {
+    padding: 3px;
+    width: 250px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+h1 {
+    background-color: green;
+    width: 385px;
+    height: 50px;
+    padding-top: 10px;
+    margin-top: 0px;
+    margin-left: 350px;
+    border-radius: 5px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+h2 {
+    margin-left: 490px;
+}
+
+p {
+    color: red;
+
+    }
+
+</style>
+</head>
+<body style="background-color: blanchedalmond">
+
+<h1> Login </h1>
+
+
+<div class="mybutton">
+    <form action="/login" method="POST">
+        <input type="hidden" name="redirect" value='<%= redirect %>' />
+        <br>
+        <%if (displayError != "") {%>
+        <p><%=displayError%></p>
+        <%}%>
+
+        <%if (username == ""){%>
+            <input type="text" class="form-control" id="title"  name="username" value="" placeholder="Username">
+        <%}else {%>
+
+            <input type="text" class="form-control" id="title" name="username" placeholder= "<%= username%>" value="<%= username%>" >
+        <%}%>
+        <br><br>
+        <%if(password == "") { %>
+
+            <input type="text" class="form-control" id="title" name="password" value="" placeholder="Password"/>
+        <%} else {%>
+
+            <input type="text" class="form-control" id="title" name="password" placeholder= "<%= password%>" value="<%=password%>" >
+        <%}%>
+        <br><br>
+         <button name="login" value="save" type="submit">Login</button>
+         <br>
+     </form>
+</div>
+
+</body>
+</html>
+
